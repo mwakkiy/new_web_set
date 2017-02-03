@@ -15,6 +15,7 @@ gulp.task('serve', ['watch'], function () {
 gulp.task('css', function(){
     return gulp.src('./src/scss/*.scss')
     .pipe($.sass()).on('error', $.sass.logError)
+    .pipe($.csso())
     .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -25,7 +26,7 @@ gulp.task('html', function(){
     .pipe($.html5Lint())
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.reload({stream: true}));
-})
+});
 
 gulp.task('img', function(){
     gulp.src('src/images/*')
@@ -37,6 +38,6 @@ gulp.task('watch', function(){
     gulp.watch('./src/images/*', ['img']);
     gulp.watch('./src/scss/**/*.scss', ['css']);
     gulp.watch('./src/*.html', ['html']);
-})
+});
 
 gulp.task('default', ['html','css','img','serve']);

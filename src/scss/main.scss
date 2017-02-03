@@ -1,3 +1,16 @@
+@charset 'utf-8';
+
+// ===========================
+// Base
+// ===========================
+@import "./base/variables";
+@import "./base/reset";
+
+body { font-family: "メイリオ", Meiryo, "游ゴシック", YuGothic, 'ＭＳ Ｐゴシック',sans-serif; color: #4a3c2f; -webkit-text-size-adjust: 100%; }
+
+// ===========================
+// Components
+// ===========================
 h1{
 	color: #FF0000;
 }
