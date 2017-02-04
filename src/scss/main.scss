@@ -14,3 +14,13 @@ body { font-family: "メイリオ", Meiryo, "游ゴシック", YuGothic, 'ＭＳ
 h1{
 	color: #FF0000;
 }
+
+#headerMenu{
+	background-color: #fff;
+	&--items{
+		margin: 5px;
+		&__active{
+			text-decoration: underline;
+		}
+	}
+}
